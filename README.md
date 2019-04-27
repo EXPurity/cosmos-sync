@@ -1,5 +1,5 @@
 # COSMOS-SYNC
-A server that synchronize COSMOS blockChain data into a database. 该服务是基于`irishub-sys-v0.11.3`修改而来。
+A server that synchronize COSMOS blockChain data into a database. 该服务是基于`irishub-sync-v0.11.3`修改而来。
 
 # Structure
 
