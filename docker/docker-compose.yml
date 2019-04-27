@@ -1,0 +1,26 @@
+version: "2"
+services:
+  cosmos-server:
+    image: cosmos/cosmos-sync:develop
+    container_name: c-cosmos-sync-develop
+    volumes:
+      - /mnt/data/cosmos-sync/log:/cosmos-sync/log
+    environment:
+      ENV: dev
+      DB_ADDR: 192.168.150.7:30000
+      DB_USER: cosmos
+      DB_PASSWD: cosmospassword
+      DB_DATABASE: sync-cosmos
+
+
+      SER_BC_NODE_URL: tcp://192.168.150.7:26657
+      SER_BC_CHAIN_ID: rainbow-dev
+      SER_BC_TOKEN: atom
+      SER_MAX_GOROUTINE: 60
+      SER_SYNC_BLOCK_NUM: 8000
+
+      LOG_FILE_PATH: /cosmos-sync/log/sync_server.log
+      LOG_FILE_MAX_SIZE: 200
+      LOG_FILE_MAX_AGE: 7
+      ENABLE_ATOMIC_LEVEL: true
+      LOG_COMPRESS: true
